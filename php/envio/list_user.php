@@ -1,6 +1,8 @@
 <?php
+echo "Joaquin Ferrer Benzegga <br/>";
     include('dbconnection.php');
-    $listaUsuarios = "SELECT * FROM agenda";
+    $listaUsuarios = "SELECT id, nombre, apellido, telefono, username, nacionalidad, 
+    sexo, fecha_modificacion FROM agenda";
     $stmt = $conn->prepare($listaUsuarios);
     $stmt->execute();
     $listaUsuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -1,4 +1,5 @@
 <?php
+echo "Joaquin Ferrer Benzegga <br/>";
     include('dbconnection.php');
     $id = $_GET["id"];
     $sql = "SELECT * FROM agenda WHERE id = :identificador";

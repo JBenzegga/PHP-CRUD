@@ -1,5 +1,6 @@
 <?php
 include('dbconnection.php');
+echo "Joaquin Ferrer Benzegga <br/>";
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +60,6 @@ include('dbconnection.php');
         $nacionalidad = filtrado($_POST["nacionalidad"]);
         $sexo = filtrado($_POST["sexo"]);
         $foto = filtrado($_FILES["foto"]["name"]);
-        include('upload_registro.php');
 
     // $sql = "INSERT INTO agenda (nombre, apellido, telefono, username, password, nacionalidad, sexo)
     // VALUES ('$nombre', '$apellidos', '$telefono', '$usuario', '$hash', '$nacionalidad', '$sexo')";
@@ -89,7 +89,6 @@ include('dbconnection.php');
     ?>
 
     <h2>Mostrar datos enviados</h2>
-    <?php $foto == "" ? print '<img src="subidas/' . $foto . '">' : "" ?>
     <p>ID: <?php print $ultimo_id ?></p>
     <p>Nombre: <?php isset($nombre) ? print $nombre : ""; ?></p>
     <p>Apellidos: <?php isset($apellidos) ? print $apellidos : ""; ?></p>
